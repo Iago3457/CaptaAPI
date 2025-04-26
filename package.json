@@ -1,0 +1,50 @@
+{
+  "name": "capta_api",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "an api for a project",
+  "main": "server.js",
+  "scripts": {
+    "dev": "tsx --env-file=.env src/server.ts",
+    "start": "node --env-file=.env .",
+    "build": "tsc -p tsconfig.json",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iago3457/CaptaAPI.git"
+  },
+  "keywords": [
+    "API",
+    "Capta"
+  ],
+  "author": "Iago3457",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Iago3457/CaptaAPI/issues"
+  },
+  "homepage": "https://github.com/Iago3457/CaptaAPI#readme",
+  "devDependencies": {
+    "@types/node": "^22.15.2",
+    "fastify": "^5.3.2",
+    "jest": "^29.7.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@fastify/autoload": "^6.3.0",
+    "@fastify/cors": "^11.0.1",
+    "chalk": "^5.4.1",
+    "consola": "^3.4.2",
+    "http-status-codes": "^2.3.0",
+    "zod": "^3.24.3"
+  },
+  "imports": {
+    "#settings/*": [
+      "./build/settings/*"
+    ],
+    "#functions/*": [
+      "./build/functions/*"
+    ]
+  }
+}
